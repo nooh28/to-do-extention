@@ -1,0 +1,13 @@
+{
+	"manifest_version": 3,
+	"name": "to do extention",
+	"version": "1.0",
+	"action": {
+		"default_popup": "index.html"
+	},
+	"icons": {
+		"16": "images.png",
+		"48": "images.png",
+		"128": "images.png"
+	}
+}
