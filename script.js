@@ -3,7 +3,6 @@ const taskInput = document.getElementById('taskInput');
 const addTaskButton = document.getElementById('addTaskButton');
 const clearTasksButton = document.getElementById('clearTasksButton');
 const taskList = document.getElementById('taskList');
-
 const tasksFromLocalStorage = JSON.parse(localStorage.getItem('tasks'));
 if (tasksFromLocalStorage) {
     tasks = tasksFromLocalStorage;
@@ -15,9 +14,9 @@ function renderTasks() {
     for (let i = 0; i < tasks.length; i++) {
         taskItems += `
         <li>
-            ${tasks[i]} <br> <div></div>
+            ${tasks[i]} <br>   <input type="checkbox" id="themeToggle" value="false">
         </li>
-        `;
+        `
     }
     taskList.innerHTML = taskItems;
 }
@@ -38,3 +37,4 @@ clearTasksButton.addEventListener('dblclick', function() {
     localStorage.removeItem('tasks');
     renderTasks();
 });
+
